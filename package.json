@@ -35,6 +35,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
+    "json-loader": "^0.5.4",
     "webpack-dev-server": "^1.14.1"
   },
   "keywords": [
@@ -43,8 +44,8 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
-    "path": "^0.12.7",
     "jquery": "^3.1.0",
+    "path": "^0.12.7",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
   }

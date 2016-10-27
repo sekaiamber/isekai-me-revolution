@@ -8,3 +8,31 @@ html, body, #main, #main>.container {
     width: 100%;
   }
 }
+
+@font-face {
+    font-family: 'fira_sansheavy';
+    src: url('./../../assets/fonts/firasans-heavy-webfont.woff2') format('woff2'),
+         url('./../../assets/fonts/firasans-heavy-webfont.woff') format('woff'),
+         url('./../../assets/fonts/firasans-heavy-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fira_sansheavy_italic';
+    src: url('./../../assets/fonts/firasans-heavyitalic-webfont.woff2') format('woff2'),
+         url('./../../assets/fonts/firasans-heavyitalic-webfont.woff') format('woff'),
+         url('./../../assets/fonts/firasans-heavyitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {font-family: 'siyuan-bolder';
+  src: url('//at.alicdn.com/t/2r3igzv0obh5b3xr.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/2r3igzv0obh5b3xr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
+}
