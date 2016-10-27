@@ -6,6 +6,60 @@ html, body, #main, #main>.container {
   .page {
     min-height: 100%;
     width: 100%;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'siyuan-bolder';
+      &>span {
+        margin-right: 20px;
+      }
+      small {
+        font-family: 'fira_sansheavy';
+      }
+    }
+
+    h1 {
+      font-size: 56px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+      h5 {
+        font-size: 18px;
+      }
+    }
+
+    code {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 30px;
+    }
+    @media (max-width: 600px) {
+      code { font-size: 16px; }
+    }
+    @media (min-width: 600px) and (max-width: 750px) {
+      code { font-size: 20px; }
+    }
+    @media (min-width: 750px) and (max-width: 1000px) {
+      code { font-size: 26px; }
+    }
+
+
+    .i-serious {
+      &.i-small {
+        border-bottom: 3px solid rgb(243, 75, 48);
+      }
+      border-bottom: 4px solid rgb(243, 75, 48);
+    }
+    .i-not-serious {
+      &.i-small {
+        border-bottom: 3px solid rgb(57, 155, 255);
+      }
+      border-bottom: 4px solid rgb(57, 155, 255);
+    }
   }
 }
 
@@ -30,9 +84,9 @@ html, body, #main, #main>.container {
 }
 
 @font-face {font-family: 'siyuan-bolder';
-  src: url('//at.alicdn.com/t/2r3igzv0obh5b3xr.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/2r3igzv0obh5b3xr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/2r3igzv0obh5b3xr.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/6uoj2x83erk9.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/6uoj2x83erk9.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/6uoj2x83erk9.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/6uoj2x83erk9.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/6uoj2x83erk9.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
 }
