@@ -40,6 +40,7 @@ var config = {
       filename: 'index.html',
       chunks: ['index', 'vendors'],
       inject: 'body',
+      favicon: './../assets/images/favicon.ico',
       hash: true
     })
   ],
