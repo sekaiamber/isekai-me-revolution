@@ -23,6 +23,7 @@ var config = {
       template: './../templates/index.dev.html',
       filename: 'index.html',
       chunks: ['index'],
+      favicon: './../assets/images/favicon.ico',
       inject: 'body'
     })
   ],
