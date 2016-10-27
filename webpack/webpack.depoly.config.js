@@ -13,6 +13,7 @@ var config = {
   },
   output: {
     path: path.join(__dirname, '..', '/root/dist'),
+    publicPath: '//assets.isekai.me/',
     filename: '[name].bundle.[hash].js',
   },
   plugins: [
