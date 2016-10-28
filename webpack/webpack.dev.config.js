@@ -73,6 +73,7 @@ var config = {
     "esnext": true
   },
   devServer: {
+    host: '0.0.0.0',
     historyApiFallback: {
       index: 'index.html',
       rewrites: [

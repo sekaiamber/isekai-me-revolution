@@ -36,12 +36,12 @@ export default class Sekai extends React.Component{
       <svg className="sekai" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 viewBox="0 0 1229.846 362.801" width="770px" height="230px">
 <pattern id="svgp-static" patternUnits="objectBoundingBox" width="1" height="1">
-  <image xlinkHref={imgstatic} x="0" y="0" width="700" height="375" preserveAspectRatio="none"></image>
+  <image xlinkHref={imgstatic} x="0" y="0" width="1200" height="380" preserveAspectRatio="none"></image>
 </pattern>
 {
   imgs.map((img, i) => 
   <pattern key={`svgp-${i}`} id={`svgp-${i}`} patternUnits="objectBoundingBox" width="1" height="1">
-    <image xlinkHref={imgs[i]} x="0" y="0" width="700" height="375" preserveAspectRatio="none"></image>
+    <image xlinkHref={imgs[i]} x="0" y="0" width="1200" height="380" preserveAspectRatio="none"></image>
   </pattern>
   )
 }
