@@ -4,6 +4,11 @@
   "description": "基于Electron的网页快速设计生成工具",
   "className": "i-serious"
 }, {
+  "text": "DWW",
+  "link": "https://sekaiamber.github.io/draw-with-words/",
+  "description": "一种有趣的交互体验",
+  "className": "i-serious"
+}, {
   "text": "FAIRY.JS",
   "link": "https://sekaiamber.github.io/fairy.js/",
   "description": "非线性演示文稿工具",
