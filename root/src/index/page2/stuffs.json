@@ -9,6 +9,11 @@
   "description": "一种有趣的交互体验",
   "className": "i-serious"
 }, {
+  "text": "Se-Yu",
+  "link": "https://sekaiamber.github.io/se-yu/",
+  "description": "一种色彩展示的尝试",
+  "className": "i-serious"
+},  {
   "text": "FAIRY.JS",
   "link": "https://sekaiamber.github.io/fairy.js/",
   "description": "非线性演示文稿工具",
