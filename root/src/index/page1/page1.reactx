@@ -1,0 +1,58 @@
+<script>
+  const React = require('react');
+
+  import Page from './../page'
+  import Sekai from './sekai'
+
+  export default class Page1 extends React.Component{
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+    }
+    componentWillUnmount(){
+    }
+    render() {
+      return (
+        <Page className="p1">
+          <Sekai />
+        </Page>
+      );
+    }
+  }
+</script>
+
+<style lang="sass">
+  .page.p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sekai {
+      width: 100%;
+      height: 100%;
+      max-width: 770px;
+      pattern image {
+        // height: 100%;
+        // width: 100%;
+      }
+      .sekai-inner {
+        fill: url(#svgp-static);
+        &.svgp-0 { fill: url(#svgp-0); }
+        &.svgp-1 { fill: url(#svgp-1); }
+        &.svgp-2 { fill: url(#svgp-2); }
+        &.svgp-3 { fill: url(#svgp-3); }
+        &.svgp-4 { fill: url(#svgp-4); }
+        &.svgp-5 { fill: url(#svgp-5); }
+        &.svgp-6 { fill: url(#svgp-6); }
+        &.svgp-7 { fill: url(#svgp-7); }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sekai {
+        transform: rotate(90deg);
+      }
+    }
+  }
+</style>
