@@ -70,17 +70,31 @@ var config = {
       {
         test: /\.json$/,
         loader: 'json-loader'
-      }
+      },
+      {
+        test: /\.reactx$/,
+        loader: 'reactx-loader'
+      },
     ]
   },
   resolve: {
     // 設定後只需要寫 require('file') 而不用寫成 require('file.jsx')
-    extensions: ['', '.js', '.json', '.jsx']
+    extensions: ['', '.js', '.json', '.jsx', '.reactx', 'react']
   },
   externals: {
     react: "React",
     'react-dom': "ReactDOM"
   },
+  reactx: {
+    // loaders for each langs
+    loaders: {
+      js: 'babel',
+      coffee: 'babel!coffee',
+      sass: 'style-loader!css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass'
+    },
+    // whether use source map
+    sourceMap: true
+  }
 };
 
 module.exports = config;

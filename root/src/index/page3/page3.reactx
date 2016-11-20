@@ -1,0 +1,41 @@
+<script>
+  const React = require('react');
+
+  import Page from './../page'
+
+  export default class Page3 extends React.Component{
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+    }
+    componentWillUnmount(){
+    }
+    shouldComponentUpdate() {
+      return false;
+    }
+    render() {
+      return (
+        <Page className="p3">
+          <div>
+            <h1><span>关于我</span><small><i>About Me</i></small></h1>
+            <pre><code>{
+              'var me = {\n  name: "Sekai",\n  birth: new Date(1990, 10, 10),\n  career: "Programmer",\n  hobby: ["Design", "Travel", "Painting"],\n  location: "Hangzhou, CHINA"\n}'
+            }</code></pre>
+          </div>
+        </Page>
+      );
+    }
+  }
+</script>
+
+<style lang="sass">
+  .page.p3 {
+    display: flex;
+    align-items: center;
+
+    &>div {
+      width: 100%;
+    }
+  }
+</style>

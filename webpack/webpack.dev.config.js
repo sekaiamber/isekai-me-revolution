@@ -60,12 +60,16 @@ var config = {
       {
         test: /\.json$/,
         loader: 'json-loader'
-      }
+      },
+      {
+        test: /\.reactx$/,
+        loader: 'reactx-loader'
+      },
     ],
     noParse: []
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.jsx'],
+    extensions: ['', '.js', '.json', '.jsx', '.reactx', 'react'],
     alias: {}
   },
   devtool: 'eval-source-map',
@@ -86,6 +90,16 @@ var config = {
     //     secure: false
     //   }
     // }
+  },
+  reactx: {
+    // loaders for each langs
+    loaders: {
+      js: 'babel',
+      coffee: 'babel!coffee',
+      sass: 'style-loader!css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass'
+    },
+    // whether use source map
+    sourceMap: true
   }
 };
 
