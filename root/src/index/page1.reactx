@@ -1,8 +1,8 @@
 <script>
   const React = require('react');
 
-  import Page from './../page'
-  import Sekai from './sekai'
+  import Page from './page'
+  import Sekai from './../common/sekai'
 
   export default class Page1 extends React.Component{
     constructor(props) {

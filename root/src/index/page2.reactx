@@ -1,15 +1,13 @@
 <script>
   const React = require('react');
 
-  import Page from './../page'
+  import Page from './page'
 
   const stuffs = require('./stuffs');
 
   export default class Page2 extends React.Component{
     constructor(props) {
       super(props);
-
-      console.log(module.hot)
     }
     componentDidMount() {
     }
