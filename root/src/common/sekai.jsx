@@ -1,15 +1,15 @@
 const React = require('react');
 
-const imgstatic = require('./../../../assets/images/static.gif');
+const imgstatic = require('./../../assets/images/static.gif');
 const imgs = [
-  require('./../../../assets/images/1.gif'),
-  require('./../../../assets/images/2.gif'),
-  require('./../../../assets/images/3.gif'),
-  require('./../../../assets/images/4.gif'),
-  require('./../../../assets/images/5.gif'),
-  require('./../../../assets/images/6.gif'),
-  require('./../../../assets/images/7.gif'),
-  require('./../../../assets/images/8.gif')
+  require('./../../assets/images/1.gif'),
+  require('./../../assets/images/2.gif'),
+  require('./../../assets/images/3.gif'),
+  require('./../../assets/images/4.gif'),
+  require('./../../assets/images/5.gif'),
+  require('./../../assets/images/6.gif'),
+  require('./../../assets/images/7.gif'),
+  require('./../../assets/images/8.gif')
 ]
 
 export default class Sekai extends React.Component{

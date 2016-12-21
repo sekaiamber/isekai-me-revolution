@@ -1,7 +1,7 @@
 <script>
   const React = require('react');
 
-  import Page from './../page'
+  import Page from './page'
 
   export default class Page3 extends React.Component{
     constructor(props) {
