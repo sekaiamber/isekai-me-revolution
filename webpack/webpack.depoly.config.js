@@ -9,6 +9,7 @@ var config = {
   context: path.join(__dirname, '..', '/root/src'),
   entry: {
     index: './index/start',
+    message: './message/start'
     vendors: ['react', 'react-dom']
   },
   output: {
@@ -42,7 +43,15 @@ var config = {
       inject: 'body',
       favicon: './../assets/images/favicon.ico',
       hash: true
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: './../templates/message.deploy.html',
+      filename: 'message.html',
+      chunks: ['message', 'vendors'],
+      inject: 'body',
+      favicon: './../assets/images/favicon.ico',
+      hash: true
+    }),
   ],
   module: {
     loaders: [
@@ -83,7 +92,9 @@ var config = {
   },
   externals: {
     react: "React",
-    'react-dom': "ReactDOM"
+    'react-dom': "ReactDOM",
+    redux: "Redux",
+    'react-redux': "ReactRedux",
   },
   reactx: {
     // loaders for each langs
