@@ -54,7 +54,7 @@ var config = {
       hash: true
     }),
     new HtmlWebpackPlugin({
-      template: './../templates/index.dev.html',
+      template: './../templates/wedding.deploy.html',
       filename: 'wedding.html',
       chunks: ['wedding'],
       favicon: './../assets/images/favicon.ico',
