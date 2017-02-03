@@ -1,0 +1,108 @@
+$color: #85A29C;
+
+.screen {
+  position: relative;
+  color: $color;
+  text-align: center;
+
+  .p1 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0, -50%);
+
+    svg#logo {
+      g {
+        path, line {
+          stroke: $color,
+        }
+      }
+    }
+  }
+
+  .p2 {
+    padding: 50px 0;
+    min-height: 100%;
+    background: $color;
+    color: #fff;
+
+    .logo1 {
+      path, line {
+        stroke: #fff;
+      }
+    }
+
+    .logo2 {
+      path, line {
+        stroke: $color;
+      }
+
+      .logo2-bg {
+        fill: #fff;
+        stroke: #fff;
+      }
+    }
+  }
+
+  .p3 {
+    padding: 50px 0;
+    .invitation {
+      display: flex;
+
+      .left {
+        width: 50%;
+        background: #eee;
+        padding: 20px;
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        &::before {
+          content: "15.9cm";
+          position: absolute;
+          bottom: 5px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+
+        &::after {
+          content: "22.8cm";
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          transform: translate(0, -50%) rotate(90deg);
+        }
+      }
+
+      .right {
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+
+        img {
+          width: 70%;
+        }
+
+      }
+    }
+  }
+}
+
+.version {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.github-corner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  .bg-color {
+    fill: $color;
+  }
+}

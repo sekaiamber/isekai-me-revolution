@@ -9,6 +9,7 @@ var config = {
     // Add each page's entry here
     index: './index/start',
     message: './message/start',
+    wedding: './wedding/start',
   },
   output: {
     path: path.join(__dirname, '..', '/root/build'),
@@ -31,6 +32,13 @@ var config = {
       template: './../templates/index.dev.html',
       filename: 'message.html',
       chunks: ['message'],
+      favicon: './../assets/images/favicon.ico',
+      inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      template: './../templates/index.dev.html',
+      filename: 'wedding.html',
+      chunks: ['wedding'],
       favicon: './../assets/images/favicon.ico',
       inject: 'body'
     })
@@ -102,6 +110,7 @@ var config = {
       rewrites: [
         { from: /\/index/, to: '/index.html' },
         { from: /\/message/, to: '/message.html' },
+        { from: /\/wedding/, to: '/wedding.html' },
       ]
     },
     // proxy: {

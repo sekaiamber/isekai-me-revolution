@@ -10,6 +10,7 @@ var config = {
   entry: {
     index: './index/start',
     message: './message/start',
+    wedding: './wedding/start',
     vendors: ['react', 'react-dom']
   },
   output: {
@@ -51,6 +52,13 @@ var config = {
       inject: 'body',
       favicon: './../assets/images/favicon.ico',
       hash: true
+    }),
+    new HtmlWebpackPlugin({
+      template: './../templates/index.dev.html',
+      filename: 'wedding.html',
+      chunks: ['wedding'],
+      favicon: './../assets/images/favicon.ico',
+      inject: 'body'
     }),
   ],
   module: {
