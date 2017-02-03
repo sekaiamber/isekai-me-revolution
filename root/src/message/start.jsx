@@ -1,6 +1,9 @@
+import React from 'react';
 import { render } from 'react-dom';
 import Index from './index';
+import createStore from '../store';
 
-const React = require('react');
+const store = createStore();
+window.store = store;
 
-render(<Index />, document.getElementById('main'));
+render(<Index store={store} />, document.getElementById('main'));

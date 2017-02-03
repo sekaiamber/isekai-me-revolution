@@ -1,4 +1,4 @@
-import message from './actionCreator/message';
+import message from './actionCreators/message';
 
 export default {
   message,

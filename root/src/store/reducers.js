@@ -4,6 +4,6 @@ import messageReducer from './reducers/message';
 import logReducer from './reducers/log';
 
 export default combineReducers({
-  message: messageReducer,
+  messages: messageReducer,
   log: logReducer,
 });

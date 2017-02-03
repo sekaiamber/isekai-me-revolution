@@ -1,20 +1,21 @@
 const defaultMessage = {
-  currentPage: 1,
-  pageCount: 1,
+  lastKey: '',
   messages: [],
 };
 
-function addMessage(state, message) {
+function dumpMessage(state, messages) {
+  const msgs = messages.concat(state.messages).unique2(val => val._key).sort((a, b) => b.createAt - a.createAt);
   return {
     ...state,
-    messages: state.messages.splice(0, 0, message),
+    messages: msgs,
+    lastKey: msgs[msgs.length - 1]._key,
   };
 }
 
 function messageReducer(state = defaultMessage, action) {
   switch (action.type) {
-    case 'MESSAGE_ADD':
-      return addMessage(state, action.message);
+    case 'MESSAGE_DUMP':
+      return dumpMessage(state, action.messages);
     default:
       return state;
   }
