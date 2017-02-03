@@ -1,16 +1,13 @@
 const React = require('react');
 
-export default class Page extends React.Component{
-  constructor(props) {
-    super(props);
-  }
+export default class Page extends React.Component {
   componentDidMount() {
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
   }
   render() {
     return (
-      <div className={"page " + this.props.className}>
+      <div className={'page ' + this.props.className}>
         {this.props.children}
       </div>
     );

@@ -1,7 +1,6 @@
-import {render} from 'react-dom';
+import { render } from 'react-dom';
+import Index from './index';
 
 const React = require('react');
 
-import Index from './index'
-
-render(<Index />, document.getElementById("main"));
+render(<Index />, document.getElementById('main'));

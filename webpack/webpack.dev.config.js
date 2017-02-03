@@ -40,7 +40,18 @@ var config = {
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
-        loader: 'jshint-loader'
+        loader: 'eslint'
+      },
+      {
+        test: /.reactx$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      },
+      ,
+      {
+        test: /.vue$/,
+        loader: 'eslint',
+        exclude: /node_modules/
       }
     ],
     loaders: [
