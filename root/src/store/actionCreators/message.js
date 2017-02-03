@@ -22,6 +22,8 @@ function addMessage(payload) {
     syncRef.push({
       ...payload,
       createAt: new Date().getTime(),
+      oo: 0,
+      xx: 0,
     }, (error) => {
       if (error === null) {
         // success

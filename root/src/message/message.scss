@@ -1,4 +1,22 @@
 .message {
   margin: 10px 0;
   border: solid 1px #000;
+  display: flex;
+
+  .gravatar {
+    padding: 10px;
+  }
+  .content-container {
+    padding: 10px;
+    flex-grow: 1;
+    .presenter {
+      font-weight: bold;
+    }
+    .content {
+      min-height: 40px;
+    }
+    .opts {
+      text-align: right;
+    }
+  }
 }

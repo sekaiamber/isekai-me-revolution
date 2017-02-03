@@ -97,6 +97,7 @@ var config = {
     'react-redux': "ReactRedux",
     lodash: "_",
     wilddog: "wilddog",
+    marked: "marked",
   },
   reactx: {
     // loaders for each langs
