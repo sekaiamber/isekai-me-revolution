@@ -1,18 +1,15 @@
+import Corner from './../common/corner';
+
 const React = require('react');
+require('./../common/g.scss');
 
-require('./../common/g.scss')
-
-import Corner from './../common/corner'
-
-export default class Index extends React.Component{
-  constructor(props) {
-    super(props);
-  }
+export default class Index extends React.Component {
   render() {
     return (
       <div className="container">
         <Corner />
+        <input type="password" pattern="[0-9]*" inputMode="numeric" />
       </div>
-    )
+    );
   }
 }

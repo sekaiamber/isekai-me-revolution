@@ -9,7 +9,7 @@ var config = {
   context: path.join(__dirname, '..', '/root/src'),
   entry: {
     index: './index/start',
-    message: './message/start'
+    message: './message/start',
     vendors: ['react', 'react-dom']
   },
   output: {
@@ -95,6 +95,7 @@ var config = {
     'react-dom': "ReactDOM",
     redux: "Redux",
     'react-redux': "ReactRedux",
+    lodash: "_",
   },
   reactx: {
     // loaders for each langs
