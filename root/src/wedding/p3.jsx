@@ -20,7 +20,7 @@ export default class P3 extends React.Component {
               <img src="https://img.alicdn.com/imgextra/i3/216279225/TB29kBIrVXXXXccXXXXXXXXXXXX_!!216279225.jpg" alt="" />
             </p>
             <p>
-              <a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.mVAnqL&id=528368115134&_u=4kr3vp1957" target="_blank" rel="noopener noreferrer"><button type="button" className="btn btn-info">购买地址</button></a>
+              <a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.75hxds&id=533605679870&_u=4kr3vp3031" target="_blank" rel="noopener noreferrer"><button type="button" className="btn btn-info">购买地址</button></a>
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Corner from './../common/corner';
 import P1 from './p1';
 import P2 from './p2';
 import P3 from './p3';
+import P4 from './p4';
 
 export default class Index extends React.Component {
   render() {
@@ -20,6 +21,9 @@ export default class Index extends React.Component {
         </div>
         <div className="screen">
           <P3 />
+        </div>
+        <div className="screen">
+          <P4 />
         </div>
       </div>
     );
