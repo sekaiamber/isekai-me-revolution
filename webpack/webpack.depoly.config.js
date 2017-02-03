@@ -56,7 +56,7 @@ var config = {
     new HtmlWebpackPlugin({
       template: './../templates/wedding.deploy.html',
       filename: 'wedding.html',
-      chunks: ['wedding'],
+      chunks: ['wedding', 'vendors'],
       favicon: './../assets/images/favicon.ico',
       inject: 'body'
     }),
