@@ -2,6 +2,11 @@ html, body, #main, #main>.container {
   height: 100%;
 }
 
+html {
+  font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 #main {
   .page {
     min-height: 100%;
