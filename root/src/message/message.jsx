@@ -13,7 +13,7 @@ export default class Message extends React.Component {
     return (
       <div className="message">
         <div className="gravatar">
-          <img src={gravatar.imageUrl({ email: this.props.email })} alt="" />
+          <img src={gravatar.imageUrl({ email: this.props.email, parameters: { size: '160' } })} alt="" />
         </div>
         <div className="content-container">
           <div className="presenter">{this.props.presenter}</div>
