@@ -18,13 +18,14 @@ function _dumpMessages(dispatch, vals) {
 }
 
 function addMessage(payload) {
-  return () => {
-    syncRef.push({
+  return (dispatch) => {
+    const data = {
       ...payload,
       createAt: new Date().getTime(),
       oo: 0,
       xx: 0,
-    }, (error) => {
+    };
+    syncRef.push(data, (error) => {
       if (error === null) {
         // success
       } else {

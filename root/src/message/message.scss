@@ -1,10 +1,18 @@
 .message {
-  margin: 10px 0;
-  border: solid 1px #000;
+  background: #fff;
+  box-shadow: 9px 9px #000;
+  border: 3px solid #000;
+  margin: 20px 0;
   display: flex;
 
   .gravatar {
     padding: 10px;
+    width: 100px;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 40px;
+    }
   }
   .content-container {
     padding: 10px;
