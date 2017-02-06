@@ -57,7 +57,7 @@
   .page.p4 p {
     margin: 50px -5px 0 -5px;
     a {
-      font-family:'fira_sansheavy';
+      font-family: fira_sansheavy, siyuan-bolder;
       color: #333;
       font-size: 50px;
       display: inline-block;
@@ -68,7 +68,7 @@
       }
     }
     span {
-      font-family:'fira_sansheavy';
+      font-family: fira_sansheavy, siyuan-bolder;
       color: #333;
       font-size: 50px;
       display: inline-block;
