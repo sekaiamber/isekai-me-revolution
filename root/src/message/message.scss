@@ -4,6 +4,8 @@
   border: 3px solid #000;
   margin: 20px 0;
   display: flex;
+  animation: messageShow .3s;
+  animation-timing-function: linear;
 
   .gravatar {
     padding: 10px;
@@ -25,6 +27,64 @@
     }
     .opts {
       text-align: right;
+      position: relative;
+
+      span {
+        cursor: pointer;
+        font-weight: bold;
+
+        &.oo {
+          color: #AAAAFF;
+
+          &:hover {
+            color: blue;
+          }
+        }
+
+        &.xx {
+          color: #FFAAAA;
+
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      &.voted::before {
+        content: 'Thank you!';
+        color: red;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: -100%;
+        pointer-events: none;
+        animation: votedShow 1s;
+        opacity: 0;
+      }
     }
+  }
+}
+
+@keyframes messageShow
+{
+  from {
+    transform: translate(9px, 9px);
+    box-shadow: 0px 0px #000; 
+  }
+  to {
+    transform: translate(0px, 0px);
+    box-shadow: 9px 9px #000;
+  }
+}
+
+@keyframes votedShow
+{
+  from {
+    top: -60%;
+    opacity: 1;
+  }
+  to {
+    top: -120%;
+    opacity: 0;
   }
 }

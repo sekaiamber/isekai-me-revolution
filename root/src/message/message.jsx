@@ -1,7 +1,10 @@
 import React from 'react';
 import gravatar from 'gravatar-api';
 import marked from 'marked';
+import { actionCreator } from '../store';
 import './message.scss';
+
+const ooxxMessageAction = actionCreator.message.ooxxMessage;
 
 function dateString(time) {
   const date = new Date(time);
@@ -9,6 +12,24 @@ function dateString(time) {
 }
 
 export default class Message extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      voted: false,
+    };
+  }
+
+
+  handleooxx(type) {
+    if (!this.state.voted) {
+      this.props.dispatch(ooxxMessageAction(this.props._key, type, () => {
+        this.setState({
+          voted: true,
+        });
+      }));
+    }
+  }
+
   render() {
     return (
       <div className="message">
@@ -18,8 +39,8 @@ export default class Message extends React.Component {
         <div className="content-container">
           <div className="presenter">{this.props.presenter}</div>
           <div className="content" dangerouslySetInnerHTML={{ __html: marked(this.props.content) }} />
-          <div className="opts">
-            {dateString(this.props.createAt)} OO [{this.props.oo}] XX [{this.props.xx}]
+          <div className={this.state.voted ? 'opts voted' : 'opts'}>
+            {dateString(this.props.createAt)} <span className="oo" onClick={this.handleooxx.bind(this, 'oo')}>OO</span> [{this.props.oo}] <span className="xx" onClick={this.handleooxx.bind(this, 'xx')}>XX</span> [{this.props.xx}]
           </div>
         </div>
       </div>
