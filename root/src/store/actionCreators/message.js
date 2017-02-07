@@ -18,7 +18,7 @@ function _dumpMessages(dispatch, vals) {
 }
 
 function addMessage(payload) {
-  return (dispatch) => {
+  return () => {
     const data = {
       ...payload,
       createAt: new Date().getTime(),
@@ -35,7 +35,7 @@ function addMessage(payload) {
   };
 }
 
-function queryMessage(lastKey, count) {
+function queryMessages(lastKey, count) {
   return (dispatch) => {
     syncRef.orderByKey().endAt(lastKey).limitToLast(count).once('value', (snapshot) => {
       _dumpMessages(dispatch, snapshot.val());
@@ -43,18 +43,47 @@ function queryMessage(lastKey, count) {
   };
 }
 
-function initMessage() {
+function initMessages() {
   return (dispatch) => {
     syncRef.endAt(0).limitToLast(10).on('child_added', (snapshot) => {
       const message = {};
       message[snapshot.key()] = snapshot.val();
       _dumpMessages(dispatch, message);
     });
+    syncRef.on('child_changed', (snapshot) => {
+      const message = snapshot.val();
+      dispatch({
+        type: 'MESSAGE_UPDATE',
+        message: {
+          ...message,
+          _key: snapshot.key(),
+        },
+      });
+    });
+  };
+}
+
+function ooxxMessage(id, type, callback) {
+  return () => {
+    syncRef.child(`${id}/${type}`).transaction((currentooxx) => {
+      if (currentooxx == null) {
+        return 0;
+      }
+      return currentooxx + 1;
+    }).then((result) => {
+      if (result.committed) {
+        console.log(`${type} success`);
+        callback();
+      } else {
+        console.log(`${type} failed`);
+      }
+    });
   };
 }
 
 export default {
   addMessage,
-  queryMessage,
-  initMessage,
+  queryMessages,
+  initMessages,
+  ooxxMessage,
 };

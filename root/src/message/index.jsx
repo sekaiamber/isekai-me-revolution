@@ -12,10 +12,10 @@ const messageActionCreator = actionCreator.message;
 
 class Index extends React.Component {
   componentDidMount() {
-    this.props.dispatch(messageActionCreator.initMessage());
+    this.props.dispatch(messageActionCreator.initMessages());
   }
   handleMore() {
-    this.props.dispatch(messageActionCreator.queryMessage(this.props.lastKey, 11));
+    this.props.dispatch(messageActionCreator.queryMessages(this.props.lastKey, 11));
   }
   render() {
     return (
@@ -29,7 +29,7 @@ class Index extends React.Component {
         </ul>
         <Submit store={this.props.store} />
         {this.props.messages.map(msg => (
-          <Message {...msg} key={msg._key} />
+          <Message {...msg} key={msg._key} dispatch={this.props.dispatch} />
         ))}
         <div className="more" onClick={this.handleMore.bind(this)}>More</div>
       </div>
