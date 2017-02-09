@@ -10,6 +10,8 @@ body {
 #main {
   .page {
     min-height: 100%;
+    // ie 下display flex垂直居中在min-height设置或者height没设置的情况下会失效，但是同时设置还是生效，所以设置一个很小的height值即可。
+    height: 1px;
     width: 100%;
 
     h1, h2, h3, h4, h5, h6 {

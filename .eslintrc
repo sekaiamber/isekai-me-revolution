@@ -38,7 +38,8 @@
     "react/jsx-boolean-value": 0,
     "react/prefer-stateless-function": 0,
     "react/no-multi-comp": 0,
-    "no-extend-native": 0
+    "no-extend-native": 0,
+    "no-return-assign": 0
   },
   "ecmaFeatures": {
     "experimentalObjectRestSpread": true
