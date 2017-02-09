@@ -3,6 +3,7 @@ import Page2 from './page2';
 import Page3 from './page3';
 import Page4 from './page4';
 import Corner from './../common/corner';
+import './index.scss';
 
 const React = require('react');
 require('./../common/g.scss');

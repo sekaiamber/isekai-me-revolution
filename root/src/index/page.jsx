@@ -7,7 +7,7 @@ export default class Page extends React.Component {
   }
   render() {
     return (
-      <div className={'page ' + this.props.className}>
+      <div className={'page ' + this.props.className} id={this.props.className}>
         {this.props.children}
       </div>
     );
