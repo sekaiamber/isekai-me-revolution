@@ -4,6 +4,11 @@
   "description": "基于Electron的网页快速设计生成工具",
   "className": "i-serious"
 }, {
+  "text": "CONTENT BASED CRAWLER",
+  "link": "https://github.com/sekaiamber/content-base-crawler",
+  "description": "基于网页结构内容相似性的爬虫页面分析程序",
+  "className": "i-not-serious"
+}, {
   "text": "REACTX LOADER",
   "link": "https://www.npmjs.com/package/reactx-loader",
   "description": "React单文件组件webpack loader",
