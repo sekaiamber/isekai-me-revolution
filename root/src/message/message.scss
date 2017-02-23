@@ -24,6 +24,10 @@
     }
     .content {
       min-height: 40px;
+
+      img {
+        max-width: 100%;
+      }
     }
     .opts {
       text-align: right;
