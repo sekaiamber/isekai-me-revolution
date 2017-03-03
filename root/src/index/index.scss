@@ -1,13 +1,23 @@
-body {
-  overflow: hidden;
-  background: #000;
+@media (min-width: 600px) {
+  body {
+    overflow: hidden;
+    background: #000;
+  }
+
+  #main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+  }
 }
 
-#main {
-  overflow-y: scroll;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
+@media (max-width: 600px) {
+  #menuBtContainer,
+  #menuContainer {
+    display: none;
+  }
 }
