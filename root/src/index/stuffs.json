@@ -1,4 +1,9 @@
 [{
+  "text": "JAVASCRIPT INTERPRETER",
+  "link": "https://github.com/sekaiamber/js-interpreter",
+  "description": "使用JavaScript编写解释器",
+  "className": "i-serious"
+}, {
   "text": "WEB PAINTER",
   "link": "https://sekaiamber.github.io/web-painter",
   "description": "基于Electron的网页快速设计生成工具",
