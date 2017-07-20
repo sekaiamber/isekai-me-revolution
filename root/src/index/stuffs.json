@@ -4,6 +4,16 @@
   "description": "使用JavaScript编写解释器",
   "className": "i-serious"
 }, {
+  "text": "CONTENT BASE CRAWLER",
+  "link": "https://github.com/sekaiamber/content-base-crawler",
+  "description": "基于内容识别的网页分析方案",
+  "className": "i-serious"
+}, {
+  "text": "GUGU",
+  "link": "https://github.com/sekaiamber/gugu-remote-console",
+  "description": "移动端远程调试工具",
+  "className": "i-serious"
+}, {
   "text": "WEB PAINTER",
   "link": "https://sekaiamber.github.io/web-painter",
   "description": "基于Electron的网页快速设计生成工具",
