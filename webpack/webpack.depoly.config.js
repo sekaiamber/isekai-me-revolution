@@ -11,6 +11,7 @@ var config = {
     index: './index/start',
     message: './message/start',
     wedding: './wedding/start',
+    limithunter: './limitHunter/start',
     vendors: ['react', 'react-dom']
   },
   output: {
@@ -60,6 +61,13 @@ var config = {
       favicon: './../assets/images/favicon.ico',
       inject: 'body'
     }),
+    new HtmlWebpackPlugin({
+      template: './../templates/limithunter.deploy.html',
+      filename: 'limithunter.html',
+      chunks: ['limithunter', 'vendors'],
+      favicon: './../assets/images/favicon.ico',
+      inject: 'body'
+    }),
   ],
   module: {
     loaders: [
@@ -106,6 +114,7 @@ var config = {
     lodash: "_",
     wilddog: "wilddog",
     marked: "marked",
+    jquery: "jQuery",
   },
   reactx: {
     // loaders for each langs
