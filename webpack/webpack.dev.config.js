@@ -10,6 +10,7 @@ var config = {
     index: './index/start',
     message: './message/start',
     wedding: './wedding/start',
+    limithunter: './limitHunter/start'
   },
   output: {
     path: path.join(__dirname, '..', '/root/build'),
@@ -39,6 +40,13 @@ var config = {
       template: './../templates/index.dev.html',
       filename: 'wedding.html',
       chunks: ['wedding'],
+      favicon: './../assets/images/favicon.ico',
+      inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      template: './../templates/index.dev.html',
+      filename: 'limithunter.html',
+      chunks: ['limithunter'],
       favicon: './../assets/images/favicon.ico',
       inject: 'body'
     })
@@ -104,7 +112,7 @@ var config = {
     "esnext": true
   },
   devServer: {
-    host: '0.0.0.0',
+    host: 'isekai.test',
     historyApiFallback: {
       index: 'index.html',
       rewrites: [
