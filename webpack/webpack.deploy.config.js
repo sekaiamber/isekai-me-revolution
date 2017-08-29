@@ -4,16 +4,28 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var WebpackShellPlugin = require('webpack-shell-plugin');
+
+var routers = require('./routers.deploy.json').routers;
+
+var entry = {
+  vendors: ['react', 'react-dom']
+};
+routers.forEach((r) => {
+  entry[r.name] = r.entry;
+});
+var plugins = routers.map(r => new HtmlWebpackPlugin({
+  template: r.template,
+  filename: r.filename,
+  chunks: [r.name, 'vendors'],
+  favicon: './assets/images/favicon.ico',
+  inject: 'body',
+  hash: true
+}));
 
 var config = {
-  context: path.join(__dirname, '..', '/root/src'),
-  entry: {
-    index: './index/start',
-    message: './message/start',
-    wedding: './wedding/start',
-    limithunter: './limitHunter/start',
-    vendors: ['react', 'react-dom']
-  },
+  context: path.join(__dirname, '..', '/root'),
+  entry,
   output: {
     path: path.join(__dirname, '..', '/root/dist'),
     publicPath: '//assets.isekai.me/',
@@ -38,37 +50,17 @@ var config = {
     new CommonsChunkPlugin('vendors', 'vendors.[hash].js', Infinity),
     new ExtractTextPlugin("[name].[hash].css"),
     new webpack.optimize.DedupePlugin(),
-    new HtmlWebpackPlugin({
-      template: './../templates/index.deploy.html',
-      filename: 'index.html',
-      chunks: ['index', 'vendors'],
-      inject: 'body',
-      favicon: './../assets/images/favicon.ico',
-      hash: true
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/message.deploy.html',
-      filename: 'message.html',
-      chunks: ['message', 'vendors'],
-      inject: 'body',
-      favicon: './../assets/images/favicon.ico',
-      hash: true
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/wedding.deploy.html',
-      filename: 'wedding.html',
-      chunks: ['wedding', 'vendors'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/limithunter.deploy.html',
-      filename: 'limithunter.html',
-      chunks: ['limithunter', 'vendors'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    }),
-  ],
+    new WebpackShellPlugin({
+      onBuildExit: [
+        'echo',
+        'echo ==============',
+        'echo      WORK',
+        'echo ==============',
+        'echo',
+        'node webpack/deploy.js',
+      ]
+    })
+  ].concat(plugins),
   module: {
     loaders: [
       {

@@ -11,7 +11,7 @@
   "scripts": {
     "build": "webpack --progress --colors --watch --config webpack/webpack.dev.config.js",
     "dev": "webpack-dev-server --progress --colors --display-error-details --inline --hot --content-base root/build --config webpack/webpack.dev.config.js",
-    "deploy": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.depoly.config.js",
+    "deploy": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js",
     "lint": "eslint --ext js,jsx,vue,reactx root"
   },
   "devDependencies": {
@@ -47,7 +47,8 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-shell-plugin": "^0.5.0"
   },
   "keywords": [
     "news"
