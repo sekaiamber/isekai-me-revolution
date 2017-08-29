@@ -3,15 +3,28 @@ var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var routers = require('./routers.dev.json').routers;
+var index = '/' + require('./routers.dev.json').index;
+
+var entry = {};
+routers.forEach((r) => {
+  entry[r.name] = r.entry;
+});
+var plugins = routers.map(r => new HtmlWebpackPlugin({
+  template: r.template,
+  filename: r.filename,
+  chunks: [r.name],
+  favicon: './assets/images/favicon.ico',
+  inject: 'body'
+}));
+var rewrites = routers.map(r => ({
+  from: new RegExp('\\/' + r.name),
+  to: '/' + r.filename,
+}));
+
 var config = {
-  context: path.join(__dirname, '..', '/root/src'),
-  entry: {
-    // Add each page's entry here
-    index: './index/start',
-    message: './message/start',
-    wedding: './wedding/start',
-    limithunter: './limitHunter/start'
-  },
+  context: path.join(__dirname, '..', '/root'),
+  entry,
   output: {
     path: path.join(__dirname, '..', '/root/build'),
     filename: '[name].bundle.js',
@@ -22,35 +35,7 @@ var config = {
       __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false')) // judge if secret environment.
     }),
     new ExtractTextPlugin("[name].css"),
-    new HtmlWebpackPlugin({
-      template: './../templates/index.dev.html',
-      filename: 'index.html',
-      chunks: ['index'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/index.dev.html',
-      filename: 'message.html',
-      chunks: ['message'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/index.dev.html',
-      filename: 'wedding.html',
-      chunks: ['wedding'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-      template: './../templates/index.dev.html',
-      filename: 'limithunter.html',
-      chunks: ['limithunter'],
-      favicon: './../assets/images/favicon.ico',
-      inject: 'body'
-    })
-  ],
+  ].concat(plugins),
   module: {
     perLoaders: [
       {
@@ -114,12 +99,8 @@ var config = {
   devServer: {
     host: 'isekai.test',
     historyApiFallback: {
-      index: 'index.html',
-      rewrites: [
-        { from: /\/index/, to: '/index.html' },
-        { from: /\/message/, to: '/message.html' },
-        { from: /\/wedding/, to: '/wedding.html' },
-      ]
+      index,
+      rewrites,
     },
     // proxy: {
     //   '/api/v1/*': {

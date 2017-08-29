@@ -1,0 +1,25 @@
+{
+  "index": "v1_index.html",
+  "routers": [{
+    "name": "v1_index",
+    "entry": "./src_v1/index/start",
+    "template": "./templates_v1/index.deploy.html",
+    "filename": "v1_index.html"
+  }, {
+    "name": "message",
+    "entry": "./src_v1/message/start",
+    "template": "./templates_v1/message.deploy.html",
+    "filename": "message.html"
+  }, {
+    "name": "wedding",
+    "entry": "./src_v1/wedding/start",
+    "template": "./templates_v1/wedding.deploy.html",
+    "filename": "wedding.html"
+  }, {
+    "name": "limithunter",
+    "entry": "./src_v1/limithunter/start",
+    "template": "./templates_v1/limithunter.deploy.html",
+    "filename": "limithunter.html"
+  }]
+}
+
