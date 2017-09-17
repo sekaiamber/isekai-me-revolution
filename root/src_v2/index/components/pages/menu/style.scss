@@ -1,0 +1,95 @@
+$color0: #9437ff;
+$color1: #3dd2c1;
+$color2: #ff84fd;
+$color3: #6cccff;
+
+.menu {
+  // counter-reset: itemCounter;
+
+  .menu-item {
+    line-height: 1;
+    position: relative;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: 3em 0;
+    padding-left: 0.5em;
+    color: #32343c;
+    z-index: 1;
+    cursor: pointer;
+
+    &::before {
+      content: attr(data-index);
+      // content: counter(itemCounter, decimal-leading-zero);
+      // counter-increment: itemCounter;
+      font-size: 0.85em;
+      font-weight: bold;
+      position: absolute;
+      right: 100%;
+      bottom: calc(100% - 0.35em);
+      color: #ddd;
+    }
+
+    .menu-item-name {
+      position: relative;
+      font-size: 1.5em;
+      font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.5em 0 0 0;
+      white-space: pre;
+      text-transform: lowercase;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 2.5em;
+        height: 4px;
+        background: #ddd;
+        border-radius: 1.25em;
+      }
+
+      &::after {
+        width: 0;
+        transition: width 0.5s;
+      }
+    }
+
+    &.i0x00 .menu-item-name::after {
+      background: $color0;
+    }
+    &.i0x01 .menu-item-name::after {
+      background: $color1;
+    }
+    &.i0x02 .menu-item-name::after {
+      background: $color2;
+    }
+    &.i0x03 .menu-item-name::after {
+      background: $color3;
+    }
+
+    &:hover,
+    &.active {
+      &.i0x00::before {
+        color: $color0;
+      }
+      &.i0x01::before {
+        color: $color1;
+      }
+      &.i0x02::before {
+        color: $color2;
+      }
+      &.i0x03::before {
+        color: $color3;
+      }
+
+      .menu-item-name::after {
+        width: 2.5em;
+      }
+    }
+  }
+}

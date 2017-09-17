@@ -1,5 +1,5 @@
 {
-  "index": "v1_index.html",
+  "index": "v2_index.html",
   "routers": [{
     "name": "v1_index",
     "entry": "./src_v1/index/start",
@@ -20,6 +20,11 @@
     "entry": "./src_v1/limithunter/start",
     "template": "./templates_v1/index.dev.html",
     "filename": "limithunter.html"
+  }, {
+    "name": "v2_index",
+    "entry": "./src_v2/index/start",
+    "template": "./templates_v2/index.dev.html",
+    "filename": "v2_index.html"
   }]
 }
 

@@ -1,0 +1,21 @@
+.sub-page {
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+
+  .back-bt {
+    text-align: right;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+
+    span {
+      color: #9437ff;
+      cursor: pointer;
+    }
+  }
+
+  .page {
+    height: 100%;
+    width: 100%;
+  }
+}

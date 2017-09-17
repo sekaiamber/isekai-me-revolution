@@ -3,7 +3,7 @@
 
   import Page from './page'
 
-  const stuffs = require('./stuffs');
+  const stuffs = require('../../assets/data/stuffs');
 
   export default class Page2 extends React.Component{
     constructor(props) {

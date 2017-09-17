@@ -1,0 +1,49 @@
+$color0: #9437ff;
+$color1: #3dd2c1;
+$color2: #ff84fd;
+$color3: #6cccff;
+
+.mask-container,
+.mask-rotate {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mask-container {
+  z-index: 100;
+  overflow: hidden;
+  display: none;
+}
+
+#mask {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  .mask-layer {
+    position: absolute;
+    height: 0;
+    width: 0;
+    // height: 100%;
+    // width: 50%;
+    // left: 0;
+    // top: 0;
+
+    &.i0x00 {
+      background: $color0;
+    }
+    &.i0x01 {
+      background: $color1;
+    }
+    &.i0x02 {
+      background: $color2;
+    }
+    &.i0x03 {
+      background: $color3;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+$color0: #9437ff;
+$color1: #3dd2c1;
+$color2: #ff84fd;
+$color3: #6cccff;
+
+#stuff {
+  padding: 1em 0 3em;
+
+  h1 {
+    text-align: center;
+    font-size: 3.5em;
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+.stuff-item {
+  text-align: center;
+  margin: 1em 0;
+
+  .text {
+    font-size: 3.5em;
+    font-family: 'Quicksand', sans-serif;
+
+    a {
+      text-decoration: none;
+    }
+
+    &.i0x00 a {
+      color: $color0;
+    }
+    &.i0x01 a {
+      color: $color1;
+    }
+    &.i0x02 a {
+      color: $color2;
+    }
+    &.i0x03 a {
+      color: $color3;
+    }
+  }
+
+  .description {
+    color: #aaa;
+  }
+}

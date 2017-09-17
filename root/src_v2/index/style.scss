@@ -1,0 +1,20 @@
+html,
+body,
+#main,
+#main>div {
+  height: 100%;
+  width: 100%;
+}
+
+#menuContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#siteTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em;
+  margin-bottom: 3em;
+}
