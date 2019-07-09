@@ -33,7 +33,7 @@ export default class Menu extends React.Component {
           <div className="menu-item" onClick={this.handleMenuItemClick.bind(this, 'p1')}>首屏<span>Home</span></div>
           <div className="menu-item" onClick={this.handleMenuItemClick.bind(this, 'p2')}>手艺<span>My Stuff</span></div>
           <div className="menu-item" onClick={this.handleMenuItemClick.bind(this, 'p3')}>关于我<span>About Me</span></div>
-          <div className="menu-item" onClick={this.handleMenuItemClick.bind(this, 'p4')}>联系我<span>Get ahold of me</span></div>
+          <div className="menu-item" onClick={this.handleMenuItemClick.bind(this, 'p4')}>Touch Me<span>Get ahold of me</span></div>
           <div className="menu-item" onClick={() => window.location = '/message'}>留言板<span>Message Borad</span></div>
         </div>
       </div>

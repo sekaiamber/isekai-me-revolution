@@ -97,7 +97,7 @@ var config = {
     "esnext": true
   },
   devServer: {
-    host: 'isekai.test',
+    // host: 'isekai.test',
     historyApiFallback: {
       index,
       rewrites,
