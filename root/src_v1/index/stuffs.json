@@ -1,6 +1,6 @@
 [{
   "text": "JAVASCRIPT INTERPRETER",
-  "link": "https://github.com/sekaiamber/js-interpreter",
+  "link": "https://github.com/sekaiamber/js-interpreter/tree/master/docs",
   "description": "使用JavaScript编写解释器",
   "className": "i-serious"
 }, {
